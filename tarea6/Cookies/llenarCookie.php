@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,9 +6,9 @@
 	<title></title>
 </head>
 <body>
-<form action="restas.php" method="POST">
-
+<form action="restarCookie.php" method="POST">
 <?php  
+session_start();
 $n=$_POST['n'];
 for ($i=0; $i<$n ; $i++) { 
 ?>
@@ -15,12 +16,13 @@ for ($i=0; $i<$n ; $i++) {
 <?php 
 }
  ?>
-<br>
+<br><br>
 <?php for ($i=0; $i<$n ; $i++) {?>
 <input type="text" name="y<?php echo $i;?>">
-<?php } ?>
+<?php }
+setcookie("n", $n, time()+3600);//Creacion de cookie
+ ?>
 
-<input type="hidden" name="n" value="<?php echo $n?>"><br><br>
 <input type="submit" name="restar"> 
 </form>
 </body>
