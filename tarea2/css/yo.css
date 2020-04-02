@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 body{
 	
@@ -31,4 +32,39 @@ body{
 }
 .menu li a:hover {
 	background: #ccc;
+=======
+
+body{
+	
+	background: #9fd5d1;
+	background-size: 1500px 800px;
+	background-attachment: fixed;
+	background-repeat: no-repeat y;
+	color : #000;
+	font-size: 20px;
+	margin:0px px;
+	font-weight: bold;
+
+}
+.menu {
+	width: 100%;
+	background: #0000;
+	margin: 10px;
+	margin
+	padding: 0;
+	text-shadow: 5px 5px 5px #fff;
+	
+}
+.menu li{
+	display: inline-block;
+	
+}
+.menu li a{
+	padding: 10px 20px;
+	display: inline-block;
+	color:black;
+}
+.menu li a:hover {
+	background: #ccc;
+>>>>>>> 8495055ecf4b87297f66811c8f250c3601b02866
 	color:#000;
