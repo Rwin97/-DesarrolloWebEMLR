@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .ConteArriba{
 width: 70%;
 height: 30%;
@@ -28,3 +29,35 @@ padding-bottom:15px;
 body{
 background-color: rgb(187, 212, 228);   
 }
+=======
+.ConteArriba{
+width: 70%;
+height: 30%;
+background-color: teal;
+}
+.menu{
+font-family: Arial;    
+font-size: 13px;
+padding: 0;
+}
+
+.menu ul a{
+font-size:15px;
+text-decoration: none;
+float: left;
+position: relative;
+left: 3.5%;
+padding: 10px;
+width: 162.5px;
+background-color: rgb(95, 136, 160);
+color: #fff;
+}
+.menu ul a:hover{
+background-color: rgb(95, 136, 160);
+margin-top:-2px;
+padding-bottom:15px;
+}
+body{
+background-color: rgb(187, 212, 228);   
+}
+>>>>>>> e7491393ab60aad01aed9c79e3f5765045050072

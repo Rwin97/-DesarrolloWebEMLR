@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     background-color: rgb(187, 212, 228);  
     } 
@@ -34,4 +35,42 @@ body{
 label{
    float: left;
    padding-left: 40%;
+=======
+body{
+    background-color: rgb(187, 212, 228);  
+    } 
+    input{    
+  width: 20%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+    }    
+
+    input[type=submit], [type=reset]{
+        width: 10%;
+        padding: 10px 15px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    select{
+        width: 20%;
+        padding: 10px 15px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+    }
+label{
+   float: left;
+   padding-left: 40%;
+>>>>>>> e7491393ab60aad01aed9c79e3f5765045050072
 }

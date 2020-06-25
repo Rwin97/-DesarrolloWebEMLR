@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -45,4 +46,53 @@ table {
 .buttonRegistrar:hover{
         background-color: rgb(69, 127, 235);
         color: white;
+=======
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  tr:nth-child(even) {
+    background-color: #dddddd;
+    
+  }
+.buttonEditar{
+  display: inline-block;
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid rgb(94, 145, 187);
+  border-radius: 6px;
+  }
+.buttonEditar:hover{
+    background-color: rgb(94, 145, 187);
+    color: white;
+    }      
+.buttonEliminar{
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    border:2px solid tomato;
+    border-radius: 6px;
+    }
+.buttonEliminar:hover{
+      background-color: rgb(238, 112, 103);
+      color: white;
+      } 
+.buttonRegistrar{
+      display: inline-block;
+      cursor: pointer;
+      background: transparent;
+      border:2px solid rgb(0, 73, 184);
+      border-radius: 6px;
+      }
+.buttonRegistrar:hover{
+        background-color: rgb(69, 127, 235);
+        color: white;
+>>>>>>> e7491393ab60aad01aed9c79e3f5765045050072
         } 
