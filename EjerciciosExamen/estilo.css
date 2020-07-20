@@ -1,0 +1,48 @@
+.contenedor{
+width: 900px;
+height: 550px;
+}
+.arriba{
+background-color: rgb(226, 236, 255);
+width: 900px;
+height: 200px;
+
+}
+h2{
+color: red;    
+}
+h3{
+color: blue;    
+}
+span{
+display: inline-block;    
+}
+#rojo{
+color: red;
+}
+#amarillo{
+color: yellow;    
+}
+#verde{
+color: green;    
+}
+
+.medio{
+   background-color: azure;
+    width: 780px;
+    height: 300px;
+    float: right;
+}
+.izquierda{
+background-color:#000000ff;
+width: 120px;
+height: 300px;
+float: left;
+}
+button{
+background-color: rgb(255, 255, 255);
+border: none;
+margin: 4px 2px;
+cursor: pointer;
+padding: 15px 20px;
+}
