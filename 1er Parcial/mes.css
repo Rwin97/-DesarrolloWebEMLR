@@ -1,0 +1,31 @@
+.contenido{
+border: 2px #70ad47 solid;
+width: 900px;
+height: 300px;
+}
+
+label{
+    color: #70ad47;
+}
+select{
+    border: 2px #70ad47 solid;
+    color: #70ad47;
+}
+#imp1{
+    border: 2px #70ad47 solid;  
+    color: #70ad47;
+}
+#imp2{
+    border: 2px #70ad47 solid;  
+    background-color: #70ad47;
+    color: white;
+}
+option{
+    color: #70ad47;
+}
+
+th{
+background-color: #70ad47;
+color: white;
+}
+

@@ -1,0 +1,55 @@
+.contenedor{
+width: 900px;
+height: 500px;    
+}
+.arriba{
+width: 900px;
+height: 200px;
+background: #B5C7E8;
+}
+.izquierda{
+width: 120px;
+height: 300px;
+background: #404040;
+float: left;
+}
+.datos{
+background: #f2f2f2;
+width: 780px;
+height: 300px;
+float: right;
+}
+button{
+    background-color: #ffffff;
+    border: none;
+    margin: 1px 1px;
+    cursor: pointer;
+    padding: 15px 20px;
+    
+    }
+#imagen1{
+float: left;
+padding-left: 5px;
+}
+#imagen2{
+float: right;
+padding-right:5% ;    
+}
+
+#rojo{
+    color: red;
+    }
+    #amarillo{
+    color: yellow;    
+    }
+    #verde{
+    color: green;    
+    }
+h2{
+color: red;
+
+}
+
+    h3{
+color: blue;
+}
