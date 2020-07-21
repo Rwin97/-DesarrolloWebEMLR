@@ -1,0 +1,97 @@
+#contenedor{
+width: 900px;
+height: 450px;
+border: 0.2px solid #000000;
+}
+#arriba{
+height: 200px;
+border: 0.2px solid #000000;
+}
+
+#datos{
+width: 770px;    
+height: 200px;
+border: 0.2px solid #000000;
+float: left;  
+}
+#derecha{
+width: 126px;
+height: 200px;
+float: right;
+border: 0.2px solid #000000;
+background-color: #366F91;
+}
+#abajo{
+height: 46px;
+width: 900px;    
+border: 0.2px solid #000000;
+background: #4C9BD3;
+float: left;
+}
+#rojo{
+color:#FF0000 ;
+}
+#amarillo{
+    color:#FFFF00 ;    
+}
+#verde{
+    color:#00B050;    
+}
+h2{
+color: #FF0000;    
+}
+h3{
+color:#4C9BD3;    
+}
+.but1{
+background-color: #FF0000;
+border: 0.2px solid #000000;
+margin: -2px 1px;
+cursor: pointer;
+padding: 10px 10px;
+font-size: small;
+width: 100px;
+}
+.but2{
+background-color: #FFFF00;
+border: 0.2px solid #000000;
+margin: -2px 1px;
+cursor: pointer;
+padding: 10px 10px;
+font-size: small;
+width: 100px;    
+}
+.but3{
+background-color: #00B050; 
+border: 0.2px solid #000000;
+margin: -2px 1px;
+cursor: pointer;
+padding: 10px 10px;
+font-size: small;
+width: 100px;   
+}
+.but4{
+background-color: aliceblue;  
+border: 0.2px solid #000000;
+margin: -2px 1px;
+cursor: pointer;
+padding: 10px 10px;
+font-size: small;
+width: 100px;  
+}
+#img1{
+    float: left;
+    padding-left: 5px;
+    }
+#img2{
+    float: right;
+    padding-right:5% ;    
+    }
+
+#color1{
+color: #4C9BD3;    
+}    
+#azul{
+color: #4C9BD3;
+
+}
