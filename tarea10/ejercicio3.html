@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="text">Introducir una palabra: </label>
+    <input type="text" id="txt">
+    <input type="button" value="EvaluarN" onclick="polindromo()">
+<script>
+function polindromo(){
+var n=document.getElementById('txt').value;
+var cadena=n;
+cadena=cadena.replace(/ /g, ""); 
+alert(cadena);
+for(i=0; i<cadena.length; i++){
+if(cadena[i]!=cadena[cadena.length-i-1]){
+    document.write("la cadena no es polindromo");
+}
+}
+
+document.write("la cadena es polindromo");
+}
+
+</script>  
+</body>
+</html>
