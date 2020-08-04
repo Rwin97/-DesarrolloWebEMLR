@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body><br><br><br>
+ <div class="container">
+    <div class="row bg-primary">
+     <div class="col border border-primary">   
+         <br><br><br>
+       <picture>
+            <input type="text" minlength="1" maxlength="1" size="1" id="l1">
+            <input type="text" minlength="1" maxlength="1" size="1" id="l2">
+            <input type="text" minlength="1" maxlength="1" size="1" id="l3">
+            <input type="text" minlength="1" maxlength="1" size="1" id="l4">
+            <input type="text" minlength="1" maxlength="1" size="1" id="l5">
+            <input type="text" minlength="1" maxlength="1" size="1" id="l6">
+            <input type="text" minlength="1" maxlength="1" size="1" id="l7">
+        </picture>
+        <br><br>
+    </div>
+</div>
+    <div class="row border border-warning">
+        
+        <br><br><br>
+        <div id="txtMensaje">  </div>
+        <center>
+        <div id="imagen">
+
+        </div>
+    </center>
+        <br><br><br>      
+
+    </div>
+    <div class="row bg-warning">
+        <div class="col border border border-warning"> 
+        
+            <label for="text">Introduzca Letra</label>
+            <input type="text" minlength="1" maxlength="1" size="1" id="v">
+            <input type="submit" onclick="Verificar()" value="verificar" class="btn btn-primary">
+            <input type="button" value="Iniciar" class="btn btn-outline-danger" id="inicio"><br><br>
+    </div>
+ </div>   
+
+ <script>
+var palabras=[["Estirar"],["Galleta"],["Guantes"],["Reflejo"],["Revelar"],["Soldado"],["Recibir"],["Mosaico"]]; 
+var palabra="";
+var rand;
+var nrocorrectos=0;
+var x=document.getElementById("inicio");
+x.addEventListener("click", Iniciar);
+x.addEventListener("click", palabraElegida);
+function Iniciar(){
+ x.style.display="none";  
+}
+function palabraCorrecta(){
+var ver=[] 
+for(let index=0; index<palabra.length;index++){
+ver[index];    
+}    
+}
+
+function palabraElegida(){
+   rand=(Math.random()*8).toFixed(0);
+   palabra=palabras[rand][0].toUpperCase();
+ alert("La palabra elegida es "+palabra);
+
+}
+
+function Verificar(){
+    valor=String(document.getElementById("v").value);
+    document.getElementById("v").value="";   
+   for(i=0; i<palabra.length; i++){
+    l1.value=valor[i];
+    l2.value=valor[i];
+    l3.value=valor[i];
+    l4.value=valor[i];
+    l5.value=valor[i];
+    l6.value=valor[i];
+    l7.value=valor[i];
+
+   } 
+    
+
+    } 
+    
+  
+    
+
+
+
+
+ </script>
+</body>
+</html>
