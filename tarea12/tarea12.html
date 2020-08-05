@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Document</title>
+</head>
+<body id="colorfondo">
+    <div class="container" >
+    <input type="radio" name="preg" value="Si" id="si" >Si <br>
+    <input type="radio" name="preg" value="No" id="no" >No <br>
+    <input type="radio" name="preg" value="Ns/Nc" id="ns" checked="checked" >NS/NC <br> 
+    <label id="muestra">muestra</label>
+    <div class="row"> 
+    <div id="contRespuesta">
+    <div id="resultado"><br><br>
+    <img src="" alt="" id="img">
+
+    </div>   
+
+<br><br><br>
+
+<br><br><br>
+</div>
+<div class="col">
+    <label for="text" id="rojo">Rojo</label><br>
+     <label for="text" id="amarillo">Amarillo</label><br>
+     <label for="text" id="verde">Verde</label><br>  
+    </div>
+    </div>
+</div>
+
+<script>
+var imagenes=['imagen/img1.png', 'imagen/img2.png', 'imagen/img3.png'];
+var s=document.getElementById("si");
+s.addEventListener("click", funSi);
+var n=document.getElementById("no");
+n.addEventListener("click", funNo);
+var ns=document.getElementById("ns");
+ns.addEventListener("click", funNs);   
+function funSi(){
+if(s.checked)
+document.getElementById("colorfondo").style.background="green";
+document.getElementById("muestra").style.color="green";
+document.getElementById("rojo").style.color="red";
+var imagen=document.getElementById("img");
+		imagen.src=imagenes[0];
+}
+function funNo(){
+    if(n.checked)
+    document.getElementById("colorfondo").style.background="red";
+    document.getElementById("muestra").style.color="red";
+document.getElementById("amarillo").style.color="yellow";
+var imagen=document.getElementById("img");
+		imagen.src=imagenes[1];
+       
+}
+function funNs(){
+    if(ns.checked)
+    document.getElementById("colorfondo").style.background="blue";
+    document.getElementById("muestra").style.color="blue";
+document.getElementById("verde").style.color="green";
+var imagen=document.getElementById("img");
+		imagen.src=imagenes[2];
+}   
+
+
+</script>
+</body>
+</html>

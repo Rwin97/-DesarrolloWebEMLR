@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<center>
+<body><br><br><br>
+    <div class="w-25 h-50 border border-primary"><br><br>
+        <h6>Lista de compras</h6><br>
+    <label for="text">elemento a comrpras: </label>
+    <input type="text" id="elemento"><br>
+    <input type="button" value="Añadir" onclick="añadir()" class="btn btn-primary"><br><br><br>
+    <div class="col-md-4 border border-primary">
+    <ul id="lista">
+    
+
+    </ul><br><br><br>
+</div><br><br><br>
+</div>
+
+</body>
+</center>
+<script>
+function añadir(){
+    elemento=String(document.getElementById("elemento").value);
+    document.getElementById("elemento").value=""; 
+    document.getElementById("lista").innerHTML+=elemento+"<br>";
+
+    }
+
+
+</script>
+</html>
