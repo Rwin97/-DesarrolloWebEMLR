@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <center> 
+<div id="contenedor">   
+<input type="number" id="vA">
+x2<input type="number" id="vB">
+x<input type="number" id="vC">=0 <br><br>
+<input type="button" value="calcular" id="Rcalcular">
+
+<ul id="resultado">
+
+
+</ul>
+<script>
+$(document).ready(function(){
+$('#Rcalcular').click(function(){  
+a=$('#vA').val();
+b=$('#vB').val();
+c=$('#vC').val();
+x1=(-b+Math.sqrt(b*b-4*a*c))/(2*a);
+alert(x1);
+x2=(-b-Math.sqrt(b*b-4*a*c))/(2*a);
+alert(x2);
+$('#resultado').append('<li>x1='+x1+'</li>');
+$('#resultado').append('<li>x2='+x2+'</li>');
+});
+});
+
+</script>
+</div></center>
+</body>
+</html>
