@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>   
+<div id="contenedor">
+
+
+    <br><br><br>
+    <input type="button" value="Insetar" class="buttonInsertar" onclick="llamar('formregistrar.php')"><br><br><br>
+    <input type="button" value="Listar" class="buttonListar" onclick="llamar('listar.php')">  
+
+ 
+<div id="Resultado"></div>
+</center>
+ <script>
+        function llamar(pagina) {
+
+        var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+        ajax.open("get", pagina, true); //a quien llamara
+        ajax.onreadystatechange = function() { // funcion de respuesta
+        if (ajax.readyState == 4) {
+        document.getElementById("Resultado").innerHTML = ajax.responseText;
+    }
+}
+ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8"); //cabecera
+ajax.send(); //llamar a la pagina
+
+}
+
+    function llamarregistrar(){
+        var ajax=new XMLHttpRequest();
+		ajax.onreadystatechange=function()
+		{
+		 if(ajax.readyState == 4) { 
+		 	
+		 	 document.getElementById('Resultado').innerHTML=ajax.responseText;
+		 	
+		 	}	
+        }
+        var parametros = "nombre="+encodeURI(document.getElementById('nombre').value) + "&apellido=" 
+        + encodeURI(document.getElementById('apellido').value) + "&nocache=" + Math.random();
+            //alert(direccion);
+            ajax.open('POST', 'registrar.php', true); //a quien llamara
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send(parametros);       
+    } 
+
+    function formEditar(id){
+       var ajax=new XMLHttpRequest();
+       var parametros = "id="+id+ "&nocache=" + Math.random();
+       
+        ajax.open("get",'formEditar.php' , true); //a quien llamara
+        
+        ajax.onreadystatechange=function()
+		{
+		 if(ajax.readyState == 4) { 
+		 	
+		 	 document.getElementById('Resultado').innerHTML=ajax.responseText;
+		 	
+		 	}	
+        }
+        
+            //alert(direccion);
+            
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send(parametros);       
+    }  
+
+    function eliminar(id){
+       var ajax=new XMLHttpRequest();
+       var parametros = "id="+id+ "&nocache=" + Math.random();
+       
+        ajax.open("get",'eliminar.php' , true); //a quien llamara
+        
+        ajax.onreadystatechange=function()
+		{
+		 if(ajax.readyState == 4) { 
+		 	
+		 	 document.getElementById('Resultado').innerHTML=ajax.responseText;
+		 	
+		 	}	
+        }   
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send(parametros);       
+    } 
+
+    function llamarEditar(id){
+        var ajax=new XMLHttpRequest();
+		ajax.onreadystatechange=function()
+		{
+		 if(ajax.readyState == 4) { 
+		 	
+		 	 document.getElementById('Resultado').innerHTML=ajax.responseText;
+		 	
+		 	}	
+        }
+        var parametros = "id="+id+"nombre="+encodeURI(document.getElementById('nombre').value) + "&apellido=" 
+        + encodeURI(document.getElementById('apellido').value) + "&nocache=" + Math.random();
+            //alert(direccion);
+            ajax.open('POST', 'editar.php', true); //a quien llamara
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send(parametros);       
+    } 
+
+    </script>
+
+
+</div> 
+  
+</body>
+</html>

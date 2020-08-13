@@ -1,0 +1,40 @@
+body{
+background-color: rgb(0, 153, 255);    
+}
+#contenedor{
+background-color: rgb(243, 229, 152);    
+width: 786px;
+height: 496px;
+}
+#Resultado{
+    width: 630px;
+    height: 496px;
+    margin-top: -14%;
+    float: right;
+    background-color: rgb(86 160 255);
+}
+.buttonInsertar{
+    float: left;
+    margin-left: 7%;
+  background: rgb(236, 248, 67);
+  cursor: pointer;
+  border: 1px solid rgb(0, 140, 255);
+  border-radius: 3px;
+}
+.buttonInsertar:hover{
+    background-color:rgb(155, 153, 153);
+    color: white;
+}
+.buttonListar{
+    float: left;
+    margin-left: 7%;
+  background: rgb(236, 248, 67);
+  cursor: pointer;
+  border: 1px solid rgb(0, 140, 255);
+  border-radius: 3px;
+}
+
+.buttonListar:hover{
+    background-color:rgb(103, 148, 161);
+    color: white;
+}
