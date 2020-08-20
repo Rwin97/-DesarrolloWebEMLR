@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <title>Document</title>
+</head>
+<body><br><br><br>
+<div class="container">
+<div class="row bg-warning border-warning">
+    <div class="col border border-warning"> 
+        <center>
+        <img src="img/usfx.png" alt="1" class="img-circle float-left"> 
+     <h1>U.s.f.x.ch</h1>
+    </center>
+    </div>
+
+</div>
+
+<div class="row border-warning" style="background-color: #fff67e;">
+    <div class="col border border-warning"> 
+        <center>  
+            <ul class="nav nav-pills nav-fill list-group list-group-horizontal">
+            <li class="nav-intem"><a class="nav-link text-dark" href="tarea17.html">Inicio</a></li>     
+            <li class="nav-intem"><a class="nav-link text-dark" href="#">Academico</a></li>   
+            <li class="nav-intem"><a class="nav-link text-dark" href="#">Postgrado</a></li> 
+        </ul>
+        </center>
+    </div>
+
+</div>
+
+<div class="row">
+<div class="col-sm bg-light border border-warning">
+        <ul class="nav flex-column nav-pills nav-fill">
+        <li class="nav-intem"><a class="nav-link text-dark" href='javascript:llamarTecnologia()'>Tecnologia</a></li>
+        <li class="nav-intem"><a class="nav-link text-dark" href="javascript:llamarMedicina()">Medicina</a></li>
+        <li class="nav-intem"><a class="nav-link text-dark" href="javascript:llamarTecnica()">Tecnica</a></li>
+        </ul>
+        
+</div>
+<div class="col-sm bg-light border border-warning">
+<div id="resultado">
+
+
+</div>   
+    
+</div>
+<div class="col-sm bg-light border border-warning">
+    <center>
+    <img src="img/UMRPSFXCH.jpg" class="rounded-circle" width="100" height="100"><br>  
+    <img src="img/tecnologia.jpg" class="rounded-circle" width="100" height="100">     
+</center>
+</div>
+</div>
+</div>
+<script>
+      
+function llamar(pagina) {
+var ajax = new XMLHttpRequest(); //es hacer llamadas apaginas 
+ajax.open("get", pagina, true); //a quien llamara
+ajax.onreadystatechange = function() { // funcion de respuesta
+if (ajax.readyState == 4) {
+document.getElementById("resultado").innerHTML = ajax.responseText;
+}
+}
+ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8"); //cabecera
+ajax.send(); //llamar a la pagina
+
+}
+
+function llamarTecnologia(){
+    ajax=new XMLHttpRequest(); //es hacer llamadas apaginas 
+    ajax.open("POST", "tecnologia.html",true); //a quien llamara
+    ajax.onreadystatechange=function() { // funcion de respuesta
+    if (ajax.readyState==4) {
+    document.getElementById('resultado').innerHTML = ajax.responseText;
+    }
+    }
+    ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8"); //cabecera
+ajax.send(); //llamar a la pagina
+    }
+
+    function llamarCarrera(){
+        var ajax=new XMLHttpRequest();
+		ajax.onreadystatechange=function()
+		{
+		 if(ajax.readyState == 4) { 
+		 	
+		 	 document.getElementById('resultado').innerHTML=ajax.responseText;
+		 	
+		 	}	
+        }
+        var parametrosSistemas = document.getElementById('sistemas');
+        var parametrosCiencias = document.getElementById('ciencias');
+            //alert(direccion);
+        if(parametrosSistemas.checked){    
+            ajax.open('POST', 'sistemas.html', true); //a quien llamara
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send(parametrosSistemas);
+        }else
+        if(parametrosCiencias.checked)
+        {
+        ajax.open('POST', 'ciencias.html', true); //a quien llamara
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send(parametrosCiencias);
+        }  
+    } 
+
+    function llamarMedicina(){
+    ajax=new XMLHttpRequest(); //es hacer llamadas apaginas 
+    ajax.open("POST", "medicina.html",true); //a quien llamara
+    ajax.onreadystatechange=function() { // funcion de respuesta
+    if (ajax.readyState==4) {
+    document.getElementById('resultado').innerHTML = ajax.responseText;
+    }
+    }
+    ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8"); //cabecera
+ajax.send(); //llamar a la pagina
+    }
+
+
+function llamarTecnica(){
+    ajax=new XMLHttpRequest(); //es hacer llamadas apaginas 
+    ajax.open("POST", "tecnica.html",true); //a quien llamara
+    ajax.onreadystatechange=function() { // funcion de respuesta
+    if (ajax.readyState==4) {
+    document.getElementById('resultado').innerHTML = ajax.responseText;
+    }
+    }
+    ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8"); //cabecera
+ajax.send(); //llamar a la pagina
+    }        
+
+</script>
+</body>
+</html>
+
+    
