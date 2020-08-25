@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Segundo Parcial Sistemas, Ciencias de la computación  </title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<div id="contenedor">
+		<div id="cabeza"> 
+			<div id="cabeza-izq"><img src="images/usfx.png" alt=""></div>
+			<div id="cabeza-cnt">
+				<span class="rojo">UNIVERSIDAD DE SAN FRANCISCO XAVIER	</span><br>
+				<span class ="celeste">Facultad de Tecnología</span>
+				<span class ="rojo">Sucre</span> 
+				<span class ="amarillo">e-Bol</span>
+				<span class ="verde">ivia</span>	
+				<br> Carreras: Ing de Sistemas,Ing en Ciencias de la Computación <br>
+				Semestre 1-2020 <br>	
+				Alumno: <span class="celeste-bg"></span> CU: <span class="celeste-bg"></span>Numero Lista: 14<span class="celeste-bg"></span><br>
+				Usuario:<span class="celeste-bg"></span> Nivel: <span class="celeste-bg"></span>
+			</div>
+			<div id="cabeza-der">
+				<img src="images/tecnologia.png" alt="">
+			</div>
+
+		</div>
+		<div id="contenido">
+		<br><br><br><br><br>
+		</div>	
+		<div id="derecha">
+		<ul class="menu">
+			<li><a href="javascript:cargar('tresenraya.html')">Pregunta 1</a></li>
+			<li><a href ="javascript:cargar('tabla.html')" >Pregunta 2</a></li>
+			<li><a href="javascript:cargar('login.php')" >Pregunta 3</a></li>
+			<li><a href ="#"  >Pregunta 4</a></li>
+			<li><a href ="javascript:cargar('formNoticias.html')" >Pregunta 5</a></li>
+		</ul>
+		</div>
+		<div id="resultado"> resultado </div>
+
+		<div id="pie"> Todos los Derechos Reservados </div>
+		
+	</div>
+</body>
+<script>
+function cargar(pagina) {
+
+var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+ajax.open("get", pagina, true); //a quien llamara
+ajax.onreadystatechange = function() { // funcion de respuesta
+    if (ajax.readyState == 4) {
+        document.getElementById("contenido").innerHTML = ajax.responseText;
+    }
+}
+ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8"); //cabecera
+ajax.send(); //llamar a la pagina
+
+}
+
+function autenticar(){
+var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+
+var parametros = "correo=" + encodeURI(document.getElementById('correo').value) + "&contraseña=" + encodeURI(document.getElementById('contraseña'))+ "&nocache=" + Math.random();
+//alert(direccion);
+ajax.open("post", "autenticar.php", true); //a quien llamara
+ajax.onreadystatechange = function() { // funcion de respuesta
+    if (ajax.readyState == 4) {
+        document.getElementById("contenido").innerHTML = ajax.responseText;
+    }
+}
+ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //clave para que funcione cuando se envia por post 
+ajax.send(parametros); //llamar a la pagina
+
+}
+
+
+function registrarNoticias(){
+var ajax = new XMLHttpRequest() //es hacer llamadas apaginas 
+
+var parametros = "&foto=" + encodeURI(document.getElementById('foto').value) + 
+"&titulo=" + encodeURI(document.getElementById('titulo').value) +"&texto=" + encodeURI(document.getElementById('textoNoticia').value) + 
+"&fecha=" +encodeURI(document.getElementById('fecha').value)+ "&nocache=" + Math.random();
+//alert(direccion);
+ajax.open("post", "registraNoticia.php", true); //a quien llamara
+ajax.onreadystatechange = function() { // funcion de respuesta
+    if (ajax.readyState == 4) {
+        document.getElementById("contenido").innerHTML = ajax.responseText;
+    }
+}
+ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //clave para que funcione cuando se envia por post 
+ajax.send(parametros); //llamar a la pagina
+
+}
+
+
+
+
+
+
+
+
+function operacion(){
+	var nsolicitado=document.getElementById("n"); 
+	var mlimite=document.getElementById("m");
+	var operacion=document.getElementsByName("operacion");
+    var suma=document.getElementById("suma");
+    var resta=document.getElementById("resta");
+    var multiplicacion=document.getElementById("multiplicacion");
+    var divicion=document.getElementById("divicion");
+    
+    if(suma.checked){
+    n=nsolicitado.value;
+    m=mlimite.value;
+    for(i=1; i<=m; i++){
+     document.write(n+"+"+i+"="+typeof Number(n+i)+"<br>");    
+    }   
+	}
+
+    if(resta.checked){
+    n=nsolicitado.value;
+    m=mlimite.value;
+    for(i=1; i<=m; i++){
+     document.write(n+"-"+i+"="+n-i+"<br>");    
+    } 
+	}
+
+    if(multiplicacion.checked){
+    n=nsolicitado.value;
+    m=mlimite.value;
+    for(i=1; i<=m; i++){
+     document.write(n+"*"+i+"="+n*i+"<br>");    
+    } 
+	} 
+
+    if(divicion.checked){
+    n=nsolicitado.value;
+    m=mlimite.value;
+    for(i=1; i<=m; i++){
+     document.write(n+"/"+i+"="+n/i+"<br>");    
+    } 
+
+	}
+}
+
+
+</script>
+
+</html>
+
