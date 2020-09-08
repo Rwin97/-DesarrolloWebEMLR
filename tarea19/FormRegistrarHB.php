@@ -22,7 +22,7 @@ $resultado=$con->query($sql);
   </div>
   <div class="card-body">
     
-  <form class="form-horizontal" method="POST">
+  <form class="form-horizontal">
 
   <div class="form-group row">
   <label class="col-md-4 col-form-label text-md-right text-dark" for="Nro">Numero de habitación: </label><br>   
@@ -33,7 +33,7 @@ $resultado=$con->query($sql);
   <div class="form-group row">
   <label class="col-md-4 col-form-label text-md-right text-dark" for="idTipoHabitacion">Tipo de habitación: </label><br>   
   <div class="col-md-6">
-  <select name="tipoHabitacion" class="form-control">
+  <select id="tipoHabitacion" class="form-control">
 <?php   
 while($fila=$resultado->fetch_assoc()){
 ?>
@@ -54,7 +54,7 @@ while($fila=$resultado->fetch_assoc()){
   <div class="form-group row">
   <label class="col-md-4 col-form-label text-md-right text-dark" for="Espacio">Espacion de habitación: </label>   
   <div class="col-md-6">
-  <input class="form-control" type="number" step="0.01" id="tamanio" min="1">
+  <input class="form-control" type="number" step="0.01" name="espacio" id="tamanio" min="1">
   </div></div><br>
 
   <div class="form-group row">
