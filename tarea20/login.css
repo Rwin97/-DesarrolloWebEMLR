@@ -1,0 +1,43 @@
+.contenedor{
+    width: 250px;
+    height: 230px;
+    
+}
+input{    
+border-radius: 1px;
+border-color: black;
+}
+label{
+color: aliceblue;    
+}
+
+
+.ConteArriba{
+    width: 63%;
+    height: 10.3%;
+    background-color: transparent;
+  
+    }
+    .menu{
+    font-family: Arial;    
+    font-size: 13px;
+    padding: 0;
+    }
+    
+    .menu ul a{
+    font-size:15px;
+    text-decoration: none;
+    float: left;
+    position: relative;
+    left: 0%;
+    padding: 10px;
+    width: 162.5px;
+    background-color: rgb(95, 136, 160);
+    color: #fff;
+    }
+    .menu ul a:hover{
+    background-color: rgb(95, 136, 160);
+    margin-top:-2px;
+    padding-bottom:15px;
+    }
+  

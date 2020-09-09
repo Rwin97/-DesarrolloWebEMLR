@@ -86,7 +86,7 @@
           Resportes
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="javascript:cargar('HabitacionE.php')">Listado de habitaciones</a>
+          <a class="dropdown-item" href="javascript:cargar('Habitacion.php')">Listado de habitaciones</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="javascript:cargar('ListaReservas.php')">Listado de reservas</a>
           <div class="dropdown-divider"></div>
