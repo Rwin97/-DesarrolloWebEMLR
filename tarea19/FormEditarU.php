@@ -1,41 +1,71 @@
-<a href="Usuarios.php">Regresar a la pagina principal</a>
 <?php
 include('comprobar.php');
 include('Conexión.php');
 $id=$_GET['id'];
-$sql="SELECT id, Correo, Password, Nombres, Apellidos, IdRol, Estado FROM usuarios";
+$sql="SELECT id, Correo, Password, Nombres, Apellidos, IdRol, Estado FROM usuarios where id=$id";
 $resultado=$con->query($sql);
 $fila=$resultado->fetch_assoc();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Forms.css">
-    <title>Document</title>
-</head>
 <body>
-<center><h2>Formulario de registro de usuario</h2>   
-<form action="EditarU.php" method="POST">
-<label for="correo">Correo: </label><br>
-<input type="text" name="correo" value="<?php echo $fila['Correo'];?>"><br>
-<label for="contraseña">Contraseña: </label><br>
-<input type="password" name="contraseña" value="<?php echo $fila['Password'];?>"><br><br>
-<label for="nombre">Nombres: </label><br>
-<input type="text" name="nombre" value="<?php echo $fila['Nombres'];?>"><br><br>
-<label for="apellidos">Apellidos: </label><br>
-<input type="text" name="apellidos" value="<?php echo $fila['Apellidos'];?>"><br><br>
-<label for="rol">Rol: </label><br>
-<input type="text" name="rol" value="<?php echo $fila['IdRol'];?>"><br><br>
-<label for="estado">Estado: </label><br>
-<input type="text" name="estado" value="<?php echo $fila['Estado'];?>"><br><br>
-<input type="reset" value="Limpear">
-<input type="submit" value="Guardar">
-<input type="hidden" name="id" value="<?php echo $id;?>" >
+  <br>
+<div class="list-group">
+<div class="row justify-content-center">
+<div class="col-med-20">
+<div class="card">
+  <div class="card-header bg-info">
+    Registrar Tipo de Habitacion 
+  </div>
+  <div class="card-body">
+    
+  <form class="form-horizontal">
 
-</form>
-</center>   
-</form>    
+  <div class="form-group row">
+  <label class="col-md-4 col-form-label text-md-right text-dark" for="correo">Correo: </label><br>   
+  <div class="col-md-6">
+  <input class="form-control" type="text" id="correo" value="<?php echo $fila['Correo'];?>"> 
+  </div></div><br>
+
+  <div class="form-group row">
+  <label class="col-md-4 col-form-label text-md-right text-dark" for="contraseña">Contraseña: </label><br>   
+  <div class="col-md-6">
+  <input class="form-control" type="password" id="password" value="<?php echo $fila['Password'];?>">
+  </div></div><br>
+
+  <div class="form-group row">
+  <label class="col-md-4 col-form-label text-md-right text-dark" for="nombre">Nombres: </label><br>   
+  <div class="col-md-6">
+  <input class="form-control" type="text" name="Nombre" id="nombre" value="<?php echo $fila['Nombres'];?>"> 
+  </div></div><br>
+
+  <div class="form-group row">
+  <label class="col-md-4 col-form-label text-md-right text-dark" for="apellidos">Apellidos: </label><br>   
+  <div class="col-md-6">
+  <input class="form-control" type="text" id="apellidos" value="<?php echo $fila['Apellidos'];?>">
+  </div></div><br>
+
+  <div class="form-group row">
+  <label class="col-md-4 col-form-label text-md-right text-dark" for="rol">Rol: </label><br>   
+  <div class="col-md-6">
+  <input class="form-control" type="text" id="rol" value="<?php echo $fila['IdRol'];?>">
+  </div></div><br>
+
+  <div class="form-group row">
+  <label class="col-md-4 col-form-label text-md-right text-dark" for="estado">Estado: </label><br>   
+  <div class="col-md-6">
+  <input class="form-control" type="text" name="Estado" id="estado" value="<?php echo $fila['Estado'];?>">
+  </div></div><br>
+
+  <div class="form-group row mb-0">
+  <div class="col-md-6 offset-md-4">
+  <input type="reset" class="btn btn-outline-info btn-lg btn-block" value="Limpear">
+  <input type="button" class="btn btn-outline-info btn-lg btn-block" value="Guardar" onclick="editarU(<?php echo $fila['id'];?>)">
+  <input type="hidden" name="id" value="<?php echo $id;?>" >
+  </div></div>
+</form> 
+
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
-</html>

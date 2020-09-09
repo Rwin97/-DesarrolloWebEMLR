@@ -41,9 +41,9 @@ $resultado=$con->query($sql);
 		{?>
     <td>
     <div class="d-flex justify-content-center">
-    <a href="javascript:formEditar(<?php echo $fila['ID'];?>)">
+    <a href="javascript:formEditarTH(<?php echo $fila['ID'];?>)">
     <img src="editar.png" width="10px"><input  type="button" class="btn btn-outline-secondary" value="Editar"></a>
-    <a href="javascript:eliminar(<?php echo $fila['ID'];?>)">
+    <a href="javascript:eliminarTH(<?php echo $fila['ID'];?>)">
     <img src="eliminar.png" width="10px"><input type="button" class="btn btn-outline-danger" value="Eliminar"></a>
     </div>
   </td> 

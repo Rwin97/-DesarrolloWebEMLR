@@ -47,8 +47,8 @@ $resultado=$con->query($sql);
     <div class="d-flex justify-content-center">
     <a href="javascript:formEditarU(<?php echo $fila['id'];?>)">
     <img src="editar.png" width="10px"><input  type="button" class="btn btn-outline-secondary" value="Editar"></a>
-    <a href="javascript:eliminarU(<?php echo $fila['id'];?>)">
-    <img src="eliminar.png" width="10px"><input type="button" class="btn btn-outline-danger" value="Eliminar"></a>
+    <a href="javascript:eliminarU(<?php echo $fila['id'];?>)"><img src="eliminar.png" width="10px"><input type="button" class="btn btn-outline-danger" value="Eliminar"></a>
+    
     </div>
   </td>   
   <?php }?>  
@@ -57,7 +57,7 @@ $resultado=$con->query($sql);
     }
     ?>
   </tr>
-  </tbody>
+  
 </table>
 </div> 
 

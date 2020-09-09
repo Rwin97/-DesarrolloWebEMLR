@@ -77,7 +77,7 @@
 
 <div class="container" id="contenido"> 
     <div class="row">
-        <div class="col">
+        <div class="col" id="conteni2">
 
 <div class="row" >
 <div class="col" ><br><br>

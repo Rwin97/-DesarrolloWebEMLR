@@ -2,7 +2,7 @@
 include("Conexión.php");
 $id=$_POST['id'];
 $correo=$_POST['correo'];
-$contraseña=$_POST['contraseña'];
+$contraseña=$_POST['password'];
 $nombre=$_POST['nombre'];
 $apellidos=$_POST['apellidos'];
 $rol=$_POST['rol'];
@@ -14,4 +14,3 @@ echo "Se edito con exito";
 else
 echo "Error al editar";
 ?>
-<meta http-equiv="refresh" content="3; URL= Usuarios.php">

@@ -1,6 +1,6 @@
 <?php include("Conexión.php");
 $sql2="select id, nombre,apellido from person";
-echo $sql2;
+
 $resultado2=$con->query($sql2);
         ?>
         <link rel="stylesheet" href="tabla.css">

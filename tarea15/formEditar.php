@@ -14,13 +14,13 @@ $fila=$resultado->fetch_assoc();
 </head>
 <body>
 <center><h2>Formulario de registro</h2>   
-<form  method="Post">
+<form>
 <label for="nombre">Nombre: </label><br>
-<input type="nombre" name="nombre" value="<?php echo $fila['nombre']; ?>"><br>
-<label for="apellido">Numero de camas: </label><br>
-<input type="apellido" name="apellido" value="<?php echo $fila['apellido']; ?>"><br><br>
+<input type="nombre" name="Nombre" id="nombre" value="<?php echo $fila['nombre']; ?>"><br>
+<label for="apellido">Apellido: </label><br>
+<input type="apellido" name="Apellido" id="apellido" value="<?php echo $fila['apellido']; ?>"><br><br>
 <input type="reset" value="Limpear">
-<input type="submit" value="Guardar" onclick="llamarEditar(<?php echo $fila['id'];?>)">
+<input type="button" value="Guardar" onclick="llamarEditar(<?php echo $fila['id'];?>)">
 <input type="hidden" name="ID" value="<?php echo $id;?>" >
 </form>
 </center>   

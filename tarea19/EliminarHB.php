@@ -8,4 +8,3 @@ echo "Se elimino con exito";
 else
 echo "Error al eliminar";
 ?>
-<meta http-equiv="refresh" content="3; URL= Habitacion.php"> 

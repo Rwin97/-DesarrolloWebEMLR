@@ -55,7 +55,7 @@ $resultado=$con->query($sql);
     
     <?php }?>
   </tr>
-  </tbody>
+  </tbody> 
 </table>
 </div> 
 

@@ -53,9 +53,9 @@ ajax.send(); //llamar a la pagina
 
     function formEditar(id){
        var ajax=new XMLHttpRequest();
-       var parametros = "id="+id+ "&nocache=" + Math.random();
+       var parametros = "formEditar.php?id="+id+ "&nocache=" + Math.random();
        
-        ajax.open("get",'formEditar.php' , true); //a quien llamara
+        ajax.open("get",parametros , true); //a quien llamara
         
         ajax.onreadystatechange=function()
 		{
@@ -74,9 +74,9 @@ ajax.send(); //llamar a la pagina
 
     function eliminar(id){
        var ajax=new XMLHttpRequest();
-       var parametros = "id="+id+ "&nocache=" + Math.random();
+       var parametros = "eliminar.php?id="+id+ "&nocache=" + Math.random();
        
-        ajax.open("get",'eliminar.php' , true); //a quien llamara
+        ajax.open("get",parametros , true); //a quien llamara
         
         ajax.onreadystatechange=function()
 		{
@@ -100,7 +100,7 @@ ajax.send(); //llamar a la pagina
 		 	
 		 	}	
         }
-        var parametros = "id="+id+"nombre="+encodeURI(document.getElementById('nombre').value) + "&apellido=" 
+        var parametros = "id="+id+"&nombre="+encodeURI(document.getElementById('nombre').value) + "&apellido=" 
         + encodeURI(document.getElementById('apellido').value) + "&nocache=" + Math.random();
             //alert(direccion);
             ajax.open('POST', 'editar.php', true); //a quien llamara
