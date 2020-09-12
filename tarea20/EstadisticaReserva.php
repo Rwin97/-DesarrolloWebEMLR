@@ -42,7 +42,8 @@ $resultado=$con->query($sql);
 </table>
 <ul>
 <div class="d-flex justify-content-center"> 
-<a href="EstadisticaR.php"><input type="button" class="btn btn-outline-primary" value="Descargar Reporte"></a>  
+<a href="EstadisticaR.php"><input type="button" class="btn btn-outline-primary" value="Descargar Reporte"></a> &nbsp&nbsp&nbsp&nbsp&nbsp 
+<a href="EstadisticaRPDF.php"><input type="button" class="btn btn-outline-danger" value="Descargar Reporte PDF"></a>  
 </div>
 </ul> 
 </div> 

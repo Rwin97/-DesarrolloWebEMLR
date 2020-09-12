@@ -48,9 +48,7 @@ $resultado=$con->query($sql);
 
 <ul>
 <div class="d-flex justify-content-center">
-		<?php if ($_SESSION['IdRol']==1)
-		{?>  
-<a href="ReporteHabitacion.php"><input type="button" class="btn btn-outline-primary" value="Descargar Reporte"></a>  
-<?php }?>  
+<a href="ReporteHabitacion.php"><input type="button" class="btn btn-outline-primary" value="Descargar Reporte"></a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="ReporteHabPDF.php"><input type="button" class="btn btn-outline-danger" value="Descargar Reporte PDF"></a>
 </div>
 </ul>
