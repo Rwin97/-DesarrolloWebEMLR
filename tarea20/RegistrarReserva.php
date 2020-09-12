@@ -10,7 +10,7 @@ $nombre=$_POST['nombre'];
 $apellido=$_POST['apellidos'];
 $correo=$_POST['correo']; 
 $sql="INSERT INTO reservas (CodigoReserva, FechaIngreso, FechaSalida, IdHabitación, Precio, Pago, Nombre, Apellidos, CorreoElectronico)
-VALUES ('$CReserva', $FIngreso, $FSalida, $IDHabitacion, $precio, $pago, '$nombre', '$apellido', '$correo')";
+VALUES ('$CReserva', '$FIngreso', '$FSalida', $IDHabitacion, $precio, $pago, '$nombre', '$apellido', '$correo')";
 $resultado=$con->query($sql);
 if($resultado)
 echo "Se registro con exito";

@@ -10,7 +10,7 @@ function cargar(pagina) {
     ajax.send(); //llamar a la pagina
     }
 
-/*--------------------------------------------------*/     
+ /*--------------------------------------------------*/     
      function llamaregistrarHB(){
         numH=document.getElementById("numH").value;
         tipoHabitacion=document.getElementById("tipoHabitacion").value;
@@ -101,7 +101,7 @@ function cargar(pagina) {
              ajax.send(parametros);       
      } 
  
-/*--------------------------------------------------*/  
+ /*--------------------------------------------------*/  
     
     function llamaregistrarTH(){  
         descripcion=document.getElementById("descripcion").value; 
@@ -307,6 +307,30 @@ function cargar(pagina) {
         +"&apellidos="+apellidos + "&correo="+correo+"&nocache=" + Math.random();
             
             ajax.open('POST', 'RegistrarReserva.php', true); //a quien llamara
+            ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            ajax.send(parametros);       
+    } 
+
+    
+    function Insertar(){      
+
+        //Img=document.getElementsByName("Img");
+        img=document.getElementById("img").value;
+        tipoHabitacion=document.getElementById('tipoHabitacion').value;
+
+        var ajax=new XMLHttpRequest();
+		ajax.onreadystatechange=function()
+		{
+		 if(ajax.readyState == 4) { 
+		 	
+		 	 document.getElementById('contenido').innerHTML=ajax.responseText;
+		 	
+		 	}	
+        }
+        var parametros = "img="+img+"&tipoHabitacion="+tipoHabitacion+"&nocache=" + Math.random();
+        alert(img);
+            
+            ajax.open('POST', 'InsertarImagen.php', true); //a quien llamara
             ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             ajax.send(parametros);       
     } 

@@ -1,10 +1,8 @@
 <?php
 include('comprobar.php');
 include('Conexión.php');
-$sql="select ID, CodigoReserva, FechaIngreso, FechaSalida, IdHabitación, Precio, Pago, Nombre, Apellidos, CorreoElectronico 
-from habitación";
+$sql="SELECT ID,Descripcion FROM tipohabitaciones";
 $resultado=$con->query($sql);  
-$fila=$resultado->fetch_assoc();
 ?>
 <body>
 <br>
@@ -26,13 +24,13 @@ $fila=$resultado->fetch_assoc();
   </div></div><br>
 
   <div class="form-group row">
-  <label class="col-md-4 col-form-label text-md-right text-dark" for="date">Fecha ingreso: </label><br>   
+  <label class="col-md-4 col-form-label text-md-right text-dark" for="fechaIngreso">Fecha ingreso: </label><br>   
   <div class="col-md-6">
   <input class="form-control" type="date" id="fechaIngreso">
   </div></div><br>
 
   <div class="form-group row">
-  <label class="col-md-4 col-form-label text-md-right text-dark" for="date">FechaSalida: </label><br>   
+  <label class="col-md-4 col-form-label text-md-right text-dark" for="fechaSalida">FechaSalida: </label><br>   
   <div class="col-md-6">
   <input class="form-control" type="date" id="fechaSalida"> 
   </div></div><br>
@@ -40,13 +38,23 @@ $fila=$resultado->fetch_assoc();
   <div class="form-group row">
   <label class="col-md-4 col-form-label text-md-right text-dark" for="apellidos">IdHabitación: </label><br>   
   <div class="col-md-6">
-  <input class="form-control" type="text" id="IdHabitacion">
+  <select class="form-control" type="text" id="IdHabitacion">
+  <?php   
+while($fila=$resultado->fetch_assoc()){
+?>
+<option value="<?php echo $fila['ID'];?>"><?php echo $fila['Descripcion'];?></option>
+<?php } ?>
+</select>  
   </div></div><br>
   
   <div class="form-group row">
   <label class="col-md-4 col-form-label text-md-right text-dark" for="precio">Precio: </label><br>   
   <div class="col-md-6">
-  <input class="form-control" type="text" id="precio">
+  <select type="text" id="precio" class="form-control">
+  <option value="10">10</option>
+  <option value="50">50</option>
+  <option value="40">40</option> 
+  </select>  
   </div></div><br>
 
   <div class="form-group row">
